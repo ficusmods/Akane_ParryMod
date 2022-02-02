@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net35</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Akane\akane_win64\Plugins\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Akane\akane_win64\Akane_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Aliases>Akane</Aliases>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Akane\akane_win64\Akane_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <Aliases>AkaneFP</Aliases>
+    </Reference>
+    <Reference Include="IllusionPlugin">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Akane\akane_win64\Akane_Data\Managed\IllusionPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Akane\akane_win64\Akane_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Akane\akane_win64\Akane_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
