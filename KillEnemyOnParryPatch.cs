@@ -44,8 +44,8 @@ namespace AkaneParryAnytime
                     float dist = Vector3.Distance(to, go.transform.position);
                     if (dist < radius)
                     {
-                        Akane::Enemy enemy = go?.GetComponent<Akane::Enemy>();
-                        if (!enemy.Dead)
+                        Akane::Enemy enemy = go.GetComponent<Akane::Enemy>();
+                        if (enemy && !enemy.Dead)
                         {
                             ret.Add(enemy);
                         }
