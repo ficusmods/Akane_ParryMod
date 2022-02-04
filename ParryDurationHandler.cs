@@ -17,7 +17,7 @@ namespace AkaneParryAnytime
         Akane::Player player;
         private void Awake()
         {
-            player = UnityEngine.Object.FindObjectOfType<Akane::Player>();
+            player = GlobalVars.player;
             this.StartCoroutine("HandleParryTimer");
         }
         private IEnumerator HandleParryTimer()

@@ -40,6 +40,7 @@ namespace AkaneParryAnytime
 
         public void OnLevelWasLoaded(int level)
         {
+            GlobalVars.player = UnityEngine.Object.FindObjectOfType<Akane::Player>();
         }
 
         public void OnUpdate()

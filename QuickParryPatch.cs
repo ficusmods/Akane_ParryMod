@@ -19,18 +19,19 @@ namespace AkaneParryAnytime
 
         static void Prefix()
         {
-            Akane::Player player = UnityEngine.Object.FindObjectOfType<Akane::Player>();
+            Akane::Player player = GlobalVars.player;
             Type type = player.GetType();
             FieldInfo f_canParry = type.GetField("canParry", BindingFlags.Instance | BindingFlags.NonPublic);
             f_canParry.SetValue(player, true);
 
+            player.ParryEvent -= Player_ParryEvent;
             player.ParryEvent += Player_ParryEvent;
             player.gameObject.AddComponent<ParryDurationHandler>();
         }
 
         private static void Player_ParryEvent()
         {
-            Akane::Player player = UnityEngine.Object.FindObjectOfType<Akane::Player>();
+            Akane::Player player = GlobalVars.player;
             if (player.isParrying)
             {
                 player.StopCoroutine("ParryCoroutine");

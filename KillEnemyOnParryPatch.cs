@@ -20,7 +20,7 @@ namespace AkaneParryAnytime
 
         static void Postfix(ref Vector3 hitPosition)
         {
-            Akane::Player player = UnityEngine.Object.FindObjectOfType<Akane::Player>();
+            Akane::Player player = GlobalVars.player;
             List<Akane::Enemy> closeEnemies = GetCloseEnemies(player.transform.position);
             foreach(Akane::Enemy enemy in closeEnemies)
             {
