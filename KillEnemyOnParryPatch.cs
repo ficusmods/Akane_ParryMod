@@ -30,6 +30,7 @@ namespace AkaneParryAnytime
             {
                 player.anim.SetTrigger("Attack");
                 player.anim.SetInteger("Attack Type", 0);
+                player.anim.SetBool("Attacking", true);
             }
         }
         public static List<Akane::Enemy> GetCloseEnemies(Vector3 to)
